@@ -26,3 +26,6 @@ C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\refint\MyApiProj
 C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\MyApiProject.pdb
 C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\MyApiProject.genruntimeconfig.cache
 C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\ref\MyApiProject.dll
+C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\MyApiProject.sourcelink.json
+C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\MyApiProject.RazorAssemblyInfo.cache
+C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\MyApiProject.RazorAssemblyInfo.cs

@@ -1,0 +1,41 @@
+@model WeatherForecast
+
+@{
+    ViewData["Title"] = "Weather Forecast Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Weather Forecast</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Date.ToShortDateString()
+        </dd>
+        <dt class="col-sm-2">
+            Temperature (C)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TemperatureC)
+        </dd>
+        <dt class="col-sm-2">
+            Temperature (F)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TemperatureF)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Summary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Summary)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
