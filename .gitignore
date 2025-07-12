@@ -45,6 +45,9 @@ nCrunchTemp_*
 *.db-journal
 *.sqlite
 
+bin/
+obj/
+
 # Logs
 logs/
 *.log
