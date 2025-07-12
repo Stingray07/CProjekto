@@ -1,12 +1,125 @@
 {
   "Version": 1,
-  "Hash": "352kwU/j6OqpsrRLjTbSZA8hny1EddXmLMPQKAd60uU=",
+  "Hash": "dMytYY5RVN4DjY3nU7y3n+qTi6Wkj0Ru/1LEhWHqksM=",
   "Source": "MyApiProject",
   "BasePath": "_content/MyApiProject",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "MyApiProject\\wwwroot",
+      "Source": "MyApiProject",
+      "ContentRoot": "C:\\Users\\Stingray\\Desktop\\CCCCCCC\\MyApiProject\\wwwroot\\",
+      "BasePath": "_content/MyApiProject",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Stingray\\Desktop\\CCCCCCC\\MyApiProject\\wwwroot\\images\\yasuo.jpg",
+      "SourceId": "MyApiProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Stingray\\Desktop\\CCCCCCC\\MyApiProject\\wwwroot\\",
+      "BasePath": "_content/MyApiProject",
+      "RelativePath": "images/yasuo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "91a8ijc91l",
+      "Integrity": "zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\yasuo.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/yasuo.91a8ijc91l.jpg",
+      "AssetFile": "C:\\Users\\Stingray\\Desktop\\CCCCCCC\\MyApiProject\\wwwroot\\images\\yasuo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "214994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 01:01:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91a8ijc91l"
+        },
+        {
+          "Name": "label",
+          "Value": "images/yasuo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0="
+        }
+      ]
+    },
+    {
+      "Route": "images/yasuo.jpg",
+      "AssetFile": "C:\\Users\\Stingray\\Desktop\\CCCCCCC\\MyApiProject\\wwwroot\\images\\yasuo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "214994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 01:01:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0="
+        }
+      ]
+    }
+  ]
 }

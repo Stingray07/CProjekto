@@ -1,5 +1,88 @@
 {
   "Version": 1,
   "ManifestType": "Build",
-  "Endpoints": []
+  "Endpoints": [
+    {
+      "Route": "images/yasuo.91a8ijc91l.jpg",
+      "AssetFile": "images/yasuo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "214994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 01:01:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91a8ijc91l"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0="
+        },
+        {
+          "Name": "label",
+          "Value": "images/yasuo.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/yasuo.jpg",
+      "AssetFile": "images/yasuo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "214994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 01:01:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zWK3d/+DyhQ41VbnvfTTA36rM2jCmzyuVqesoEwoUZ0="
+        }
+      ]
+    }
+  ]
 }

@@ -34,12 +34,26 @@ public class WeatherForecastController : Controller
     };
 
     return View(forecast);
-}
+    }
 
-    // GET: /WeatherForecast/Create
-    public IActionResult Create()
+    // POST: /WeatherForecast/Create
+    [HttpPost]
+    public IActionResult Create([FromBody] WeatherForecast forecast)
     {
-        return View();
+        if (!ModelState.IsValid)
+        {
+            Console.WriteLine("Invalid Model State");
+            return BadRequest(ModelState);
+        }
+        Console.WriteLine("Valid Model State");
+        Console.WriteLine(forecast.Date);
+        Console.WriteLine(forecast.TemperatureC);
+        Console.WriteLine(forecast.Summary);
+        return Ok(new {
+            success = true,
+            message = "Weather forecast created successfully",
+            data = forecast
+        });
     }
 
 }

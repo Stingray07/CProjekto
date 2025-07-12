@@ -29,3 +29,4 @@ C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\ref\MyApiProject
 C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\MyApiProject.sourcelink.json
 C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\MyApiProject.RazorAssemblyInfo.cache
 C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\obj\Debug\net8.0\MyApiProject.RazorAssemblyInfo.cs
+C:\Users\Stingray\Desktop\CCCCCCC\MyApiProject\bin\Debug\net8.0\MyApiProject.staticwebassets.runtime.json
