@@ -1,0 +1,30 @@
+@model Player
+
+<div>
+    <h2>@Model.SummonerName</h2>
+    <img src="https://ddragon.leagueoflegends.com/cdn/13.14.1/img/profileicon/@(Model.ProfileIconId).png" 
+         alt="Profile Icon" 
+         width="100" 
+         class="rounded-circle" />
+    
+    <dl class="row mt-3">
+        <dt class="col-sm-3">Region</dt>
+        <dd class="col-sm-9">@Model.Region</dd>
+        
+        <dt class="col-sm-3">Level</dt>
+        <dd class="col-sm-9">@Model.Level</dd>
+        
+        <dt class="col-sm-3">Last Updated</dt>
+        <dd class="col-sm-9">@Model.LastUpdated.ToString("g")</dd>
+    </dl>
+
+    <h3>Recent Matches</h3>
+    @if (Model.Matches?.Any() == true)
+    {
+        <partial name="_MatchList" model="Model.Matches" />
+    }
+    else
+    {
+        <p>No match history available.</p>
+    }
+</div>
