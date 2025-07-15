@@ -30,6 +30,9 @@ _ReSharper*/
 # Local development settings
 appsettings.Development.json
 appsettings.local.json
+appsettings.json
+appsettings.*.json
+!appsettings.json
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
