@@ -54,3 +54,6 @@ obj/
 # Logs
 logs/
 *.log
+
+MyApiProject/bin/
+MyApiProject/obj/
