@@ -1,3 +1,4 @@
+namespace MyApiProject.Services;
 public class RiotApiService : IRiotApiService
 {
     private readonly HttpClient _httpClient;
@@ -8,19 +9,27 @@ public class RiotApiService : IRiotApiService
     }
 
     public async Task<string> GetSummonerByPUUIDAsync(string encryptedPUUID)
+{
+    try
     {
-        try
-        {
-            var response = await _httpClient.GetAsync($"/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}");
-            response.EnsureSuccessStatusCode();
-            var content = await response.Content.ReadAsStringAsync();
-            return content;
-        }
-        catch (Exception ex)
-        {
-            throw new Exception($"Error getting summoner by PUUID: {ex.Message}");
-        }
+
+        // THERE IS NO PUUID BEING SENT SO RIOT RESPONDS WITH 403
+        var url = $"/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}";
+        Console.WriteLine($"Sending GET request to: {_httpClient.BaseAddress}{url}");
+        Console.WriteLine($"Headers: {string.Join(", ", _httpClient.DefaultRequestHeaders.Select(h => $"{h.Key}: {string.Join(", ", h.Value)}"))}");
+        
+        var response = await _httpClient.GetAsync(url);
+        Console.WriteLine($"Response Status: {response.StatusCode}");
+        
+        var content = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"Response Content: {content}");
+        
+        return content;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error: {ex.Message}");
+        throw;
     }
 }
-
-//Learn more about dependency injection
+}

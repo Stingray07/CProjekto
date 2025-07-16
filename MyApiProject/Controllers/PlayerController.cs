@@ -1,7 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
+using MyApiProject.Services;
+namespace MyApiProject.Controllers;
 
 public class PlayerController : Controller
 {
+    private readonly IRiotApiService _riotApiService;
+
+    public PlayerController(IRiotApiService riotApiService)
+    {
+        _riotApiService = riotApiService;
+    }
 
     // // GET: /Player
     // public async Task<IActionResult> Index()
@@ -11,7 +19,7 @@ public class PlayerController : Controller
 
 
     // GET: /Player/Details/5
-    public async Task<IActionResult> Details(int? id)
+    public async Task<IActionResult> Details(string encryptedPUUID)
     {
         //could just use a parameter for player searching if lazy
         //some data, should be database or api if not in db
@@ -39,11 +47,12 @@ public class PlayerController : Controller
 
         player.Matches.Add(match);
 
-        if (id == null) return NotFound();
+        var summoner = await _riotApiService.GetSummonerByPUUIDAsync(encryptedPUUID);
+        Console.WriteLine(summoner);
+
+        if (encryptedPUUID == null) return NotFound();
 
         return View(player);
     }
 
 }
-
-//TODO: Get RIOT API ID and connect with db
