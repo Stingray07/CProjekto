@@ -47,12 +47,38 @@ public class PlayerController : Controller
 
         player.Matches.Add(match);
 
+        if (encryptedPUUID == null) return NotFound();
+
+        return View(player);
+    }
+
+    [HttpGet("Player/ByPUUID/{encryptedPUUID}")]
+    public async Task<IActionResult> ByPUUID(string encryptedPUUID)
+    {
+        Console.WriteLine($"Received encryptedPUUID: '{encryptedPUUID}'");
         var summoner = await _riotApiService.GetSummonerByPUUIDAsync(encryptedPUUID);
         Console.WriteLine(summoner);
 
         if (encryptedPUUID == null) return NotFound();
 
-        return View(player);
+        return View(summoner);
+    }
+
+    // create a parser for the summoner json
+    private Player ConvertToPlayer(string summonerJson)
+    {
+        var summoner = JsonConvert.DeserializeObject<Summoner>(summonerJson);
+        return new Player
+        {
+            Id = 1,
+            SummonerId = summoner.Id,
+            SummonerName = summoner.Name,
+            Region = "1",
+            Matches = new List<Match>(),
+            ProfileIconId = summoner.ProfileIconId,
+            Level = summoner.Level,
+            LastUpdated = DateTime.Now
+        };
     }
 
 }

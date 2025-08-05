@@ -12,12 +12,12 @@ public class RiotApiService : IRiotApiService
     {
         try
         {
-
+            Console.WriteLine($"encryptedPUUID: {encryptedPUUID}");
             // THERE IS NO PUUID BEING SENT SO RIOT RESPONDS WITH 403
             var url = $"/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}";
             Console.WriteLine($"Sending GET request to: {_httpClient.BaseAddress}{url}");
             Console.WriteLine($"Headers: {string.Join(", ", _httpClient.DefaultRequestHeaders.Select(h => $"{h.Key}: {string.Join(", ", h.Value)}"))}");
-            
+
             var response = await _httpClient.GetAsync(url);
             Console.WriteLine($"Response Status: {response.StatusCode}");
             
@@ -33,18 +33,16 @@ public class RiotApiService : IRiotApiService
         }
     }
 
-    public async Task<List<string>> GetChampionMasteryByPUUIDAsync(string encryptedPUUID)
-    {
+    public async Task<string> GetSummonerByNameAsync(string name)
+    { 
         try
-        { 
-            var url = $"/lol/champion-mastery/v4/champion-masteries/by-puuid/{encryptedPUUID}";
+        {
+            var url = $"/lol/summoner/v4/summoners/by-name/{name}";
             Console.WriteLine($"Sending GET request to: {_httpClient.BaseAddress}{url}");
             Console.WriteLine($"Headers: {string.Join(", ", _httpClient.DefaultRequestHeaders.Select(h => $"{h.Key}: {string.Join(", ", h.Value)}"))}");
             
             var response = await _httpClient.GetAsync(url);
             Console.WriteLine($"Response Status: {response.StatusCode}");
-
-            //read docs if what is being returned is a list
             
             var content = await response.Content.ReadAsStringAsync();
             Console.WriteLine($"Response Content: {content}");

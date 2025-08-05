@@ -19,7 +19,6 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.MapControllers();
 app.UseRouting();
@@ -32,3 +31,6 @@ app.MapControllerRoute(
 Console.WriteLine($"API Key: {riotApiKey}"); // Check if this shows your key
 
 app.Run();
+
+// for development
+// dotnet user-secrets set "RiotApi:ApiKey" "YOUR_API_KEY"
